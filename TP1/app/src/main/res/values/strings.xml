@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">Inline-Calculator</string>
+    <string name="enter_operation">Enter the operation :</string>
+    <string name="input_place_holder" translatable="false">(1+1)*2</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">The result is :</string>
+    <string name="invalidOperation">Invalid operation !</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="infos" translatable="false">INFOS</string>
+    <string name="funcsList">List of functions to use</string>
+    <string name="example" translatable="false">Example :    cos(60)*abs( sin (10) ) +2</string>
+    <string name="github"><a href="https://github.com/ubmagh/mobile-dev-tps/TP1">GitHub</a></string>
+</resources>

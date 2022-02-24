@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculate">Calculer</string>
+    <string name="result">Le résultat est :</string>
+    <string name="invalidOperation">Opération invalide : erronée !</string>
+    <string name="enter_operation">"Saisissez l\"opération : "</string>
+    <string name="funcsList">Liste des fonctions à utiliser</string>
+</resources>
