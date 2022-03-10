@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/headerbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-156dp">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/keywordsInput"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:boxCollapsedPaddingTop="3dp"
+                app:layout_column="0"
+                app:layout_row="0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="auto"
+                    android:focusableInTouchMode="true"
+                    android:hint="Search keywords ..."
+                    android:text="Morocco" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_marginStart="7dp"
+                android:text="Search"
+                app:layout_column="1"
+                app:layout_row="0"
+                app:layout_rowSpan="2" />
+
+            <EditText
+                android:id="@+id/dateInput"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="8"
+                android:enabled="true"
+                android:focusableInTouchMode="false"
+                android:hint="News starting from : DD/MM/YYYY"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:onClick="setDate"
+                android:textAlignment="center"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:clickable="false" />
+
+        <ListView
+            android:id="@+id/listViewNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Either nothing found OR API key has reached its limit "
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/spinner"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:indeterminateTint="#673AB7"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:progress="4"
+            android:secondaryProgressTint="#673AB7"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

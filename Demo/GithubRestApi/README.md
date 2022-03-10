@@ -1,4 +1,4 @@
-#GitHub Rest Api
+# GitHub Rest Api
 
 simple android app that uses GitHub public API to search & display users accounts.
 Retrofit is used to fetch data.
