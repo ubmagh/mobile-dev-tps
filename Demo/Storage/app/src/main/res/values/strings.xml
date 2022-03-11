@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">storage</string>
+    <string name="name">First name</string>
+    <string name="lastName">Last Name</string>
+    <string name="age">Age</string>
+    <string name="saveBtn">Save</string>
+    <string name="loadBtn">Load</string>
+    <string name="ClearBtn">Clear</string>
+</resources>
