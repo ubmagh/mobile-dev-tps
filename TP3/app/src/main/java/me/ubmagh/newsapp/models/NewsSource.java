@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class NewsSource implements Serializable {
 
+    // private int id;
     private String name;
 
     public String getName() {

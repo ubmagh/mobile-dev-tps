@@ -117,7 +117,7 @@
             android:progress="4"
             android:secondaryProgressTint="#673AB7"
             android:textAlignment="center"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
 
     </LinearLayout>

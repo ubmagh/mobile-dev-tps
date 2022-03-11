@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     private Retrofit retrofit;
     private ArticlesListAdapter adapter;
     private RestApiService serviceAPI;
-
     private ProgressBar progressBar;
     private LinearLayout errorLayout;
 

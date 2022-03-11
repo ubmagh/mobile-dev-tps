@@ -7,7 +7,6 @@ import java.util.Date;
 
 public class Article implements Serializable {
 
-
     private NewsSource source;
 
     private String author;
