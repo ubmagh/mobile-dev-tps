@@ -1,6 +1,6 @@
 # TP 4 : store data on local files
 
-- simple app that stores managed Students data in a serialized manner on local file.
+- simple app that stores managed-Students-data in a serialized manner on a local file.
 
 
 - In the app :
