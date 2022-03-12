@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Students management</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Students List</string>
+    <string name="second_fragment_label">Add a student</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="action_clear">Clear Students data</string>
+    <string name="lname">Last name</string>
+    <string name="bdate">Birth Date</string>
+    <string name="_class">Class</string>
+    <string name="id">ID</string>
+    <string name="fname">First name</string>
+    <string name="enter_student_details">Enter student details bellow :</string>
+    <string name="saveBtn">Save</string>
+    <string name="cancelBtn">Cancel</string>
+    <string name="action_github">Github repo</string>
+</resources>

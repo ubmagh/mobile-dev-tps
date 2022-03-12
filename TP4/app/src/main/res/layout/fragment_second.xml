@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ndFragLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".SecondFragment">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="12dp"
+        android:visibility="visible"
+        app:columnCount="2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center|center_horizontal"
+            android:text="@string/enter_student_details"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="7dp"
+            android:autoText="true"
+            android:ems="10"
+            android:hint="@string/fname"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="7dp"
+            android:autoText="true"
+            android:ems="10"
+            android:hint="@string/lname"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/idd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="7dp"
+            android:autoText="true"
+            android:ems="10"
+            android:hint="@string/id"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <EditText
+            android:id="@+id/classs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="7dp"
+            android:ems="10"
+            android:hint="@string/_class"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="4" />
+
+        <EditText
+            android:id="@+id/bdate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="5dp"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/bdate"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_column="0"
+            app:layout_row="6">
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/saveBtn"
+                app:icon="@android:drawable/ic_input_add" />
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/cancelBtn"
+                app:icon="@android:drawable/ic_notification_clear_all" />
+        </LinearLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
