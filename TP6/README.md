@@ -2,4 +2,4 @@
 
 create & delete products : 
 
-<img src="./imgs/a.png" />
+<img src="./imgs/a.png" width="400" />
