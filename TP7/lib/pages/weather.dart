@@ -1,11 +1,9 @@
 import 'dart:convert';
-import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:tp7_apps/providers/weather_state.dart';
-import 'package:tp7_apps/widgets/app_drawer.dart';
 import 'package:http/http.dart' as http;
 
 class Weather extends StatelessWidget {

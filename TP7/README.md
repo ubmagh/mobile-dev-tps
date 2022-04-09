@@ -1,16 +1,40 @@
 # tp7_apps
 
-consuming rest apis, discovering navigation & routing
+A set of apps, built when i was discouvering flutter, things i learned ; 
+consuming rest apis, discovering navigation , routing & Globale state using ChangeNotifier
 
-## Getting Started
+<br/>
 
-This project is a starting point for a Flutter application.
+## Used APIs : 
 
-A few resources to get you started if this is your first Flutter project:
+* weather-api : https://github.com/robertoduessmann/weather-api
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+* Covid-19 api : https://github.com/M-Media-Group/Covid-19-API 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* news Api : https://newsapi.org/v2/ 
+
+
+<br/>
+
+### Screens ;
+
+<table>
+    <tbody>
+        <tr>
+            <td> <img src="./assets/1.jpg" /></td>
+            <td> <img src="./assets/1-2.jpg" /></td>
+        </tr>
+        <tr>
+            <td> <img src="./assets/2.jpg" /></td>
+            <td> <img src="./assets/3.jpg" /></td>
+        </tr>
+        <tr>
+            <td> <img src="./assets/4.jpg" /></td>
+            <td> <img src="./assets/5.jpg" /></td>
+        </tr>
+        <tr>
+            <td> <img src="./assets/6.jpg" /></td>
+            <td> <img src="./assets/7.jpg" /></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.ubmagh.tp7_apps">
-   <application
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
         android:label="tp7_apps"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
