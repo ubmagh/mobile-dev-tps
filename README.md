@@ -10,3 +10,4 @@
 |  5  |  dart console apps | [:link:](https://github.com/ubmagh/mobile-dev-tps/tree/main/TP5) | dart script |
 |  6  |  products management app | [:link:](https://github.com/ubmagh/mobile-dev-tps/tree/main/TP6) | flutter app |
 |  7  |  Set of apps | [:link:](https://github.com/ubmagh/mobile-dev-tps/tree/main/TP7) | flutter app |
+|  8  |  TP7 + webview + state managed with provider ++ | [:link:](https://github.com/ubmagh/mobile-dev-tps/tree/main/TP8) | flutter app |
