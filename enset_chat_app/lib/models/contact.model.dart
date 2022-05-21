@@ -11,6 +11,7 @@ class Contact {
   String lastMessage;
   String lastMessageDate;
 
+
   Contact({ required this.id, required this.name, required this.group, required this.profile, required this.email,
     required this.lastMessage, required this.lastMessageDate});
 

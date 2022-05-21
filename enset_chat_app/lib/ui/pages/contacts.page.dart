@@ -1,9 +1,12 @@
-import 'dart:html';
-
-import 'package:enset_chat_app/bloc/blocs/contact.bloc.dart';
-import 'package:enset_chat_app/bloc/events/contact.event.dart';
-import 'package:enset_chat_app/bloc/states/contact.state.dart';
+import 'package:enset_chat_app/blocs/contact/contact.bloc.dart';
+import 'package:enset_chat_app/blocs/contact/contact.event.dart';
+import 'package:enset_chat_app/blocs/contact/contact.state.dart';
+import 'package:enset_chat_app/blocs/message/message.bloc.dart';
+import 'package:enset_chat_app/blocs/message/messages.event.dart';
+import 'package:enset_chat_app/enums/requestState.enum.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ContactsPage extends StatelessWidget {
@@ -108,11 +111,14 @@ class ContactsPage extends StatelessWidget {
                           child:
                               Text(state.contacts[index].name.substring(0, 1))),
                       title: Text(state.contacts[index].name),
+                      onTap: (){
+                        context.read<MessageBloc>().add(ContactMessageEvent(contact: state.contacts[index]));
+                        Navigator.pushNamed(context, "/messages",arguments:state.contacts[index] );
+                      },
                       subtitle: Text(
                           state.contacts[index].lastMessage.isNotEmpty
-                              ? "Last message : " +
-                                  state.contacts[index].lastMessage
-                              : ""),
+                              ? state.contacts[index].lastMessage.length>10? state.contacts[index].lastMessage.substring(0,10)+"...":state.contacts[index].lastMessage
+                              : "", softWrap: true),
                       trailing: Text("Groupe : " + state.contacts[index].group),
                     );
                   });

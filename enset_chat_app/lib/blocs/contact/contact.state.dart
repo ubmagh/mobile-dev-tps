@@ -1,8 +1,8 @@
 
+import 'package:enset_chat_app/enums/requestState.enum.dart';
 import 'package:enset_chat_app/models/contact.model.dart';
 
 
-enum RequestState { Loaded, Loading, Error, None}
 class ContactState {
 
   List<Contact> contacts = [];

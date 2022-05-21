@@ -1,6 +1,7 @@
 
-import 'package:enset_chat_app/bloc/events/contact.event.dart';
-import 'package:enset_chat_app/bloc/states/contact.state.dart';
+import 'package:enset_chat_app/blocs/contact/contact.event.dart';
+import 'package:enset_chat_app/blocs/contact/contact.state.dart';
+import 'package:enset_chat_app/enums/requestState.enum.dart';
 import 'package:enset_chat_app/repositories/contact.repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

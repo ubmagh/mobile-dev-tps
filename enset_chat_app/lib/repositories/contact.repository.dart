@@ -7,7 +7,7 @@ class ContactRepository {
 
   List<Contact> contacts = [
 
-    Contact(id: 1, name: "Ayoub", group: "BDCC", profile: "ubmagh", email: "ayoub@ayoub.me", lastMessage: "Hello", lastMessageDate: "11/05/2022"),
+    Contact(id: 1, name: "Ayoub", group: "BDCC", profile: "ubmagh", email: "ayoub@ayoub.me", lastMessage: "Moi aussi Alhamdolillah, merci", lastMessageDate: "11/05/2022"),
     Contact(id: 2, name: "Ahmed", group: "GLSID", profile: "ahmed", email: "ahmed@ahmed.me", lastMessage: "Hello", lastMessageDate: "09/05/2022"),
     Contact(id: 3, name: "Ali", group: "BDCC", profile: "ali", email: "ali@ali.me", lastMessage: "Hello", lastMessageDate: "01/05/2022"),
     Contact(id: 4, name: "Jamal", group: "BDCC", profile: "jamal", email: "ali@ali.me", lastMessage: "Hello", lastMessageDate: "20/04/2022"),
@@ -30,7 +30,7 @@ class ContactRepository {
   Future<List<Contact>> getContactsByGroup( String group) async{
     var future = await Future.delayed(const Duration(seconds: 2));
     int rand = Random().nextInt(10);
-    if( rand>5) {
+    if( rand>9) {
       throw Exception("Kind of error happened 0x33 !");
     }
     var groupeContacts = contacts.where((element) => element.group==group).toList();
