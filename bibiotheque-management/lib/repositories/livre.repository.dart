@@ -24,9 +24,9 @@ class LivreRepository {
   Future<List<Livre>> findLivres( String keyword) async {
     var future = await Future.delayed(const Duration(seconds: 2));
     List<Livre> result = livres.where((element){
-       return element.titre.contains(keyword);
+       return element.titre.toLowerCase().contains(keyword) || element.auteur.toLowerCase().contains(keyword) || element.isbn.toLowerCase().contains(keyword) || element.anne_publication.toString().contains(keyword) ;
     }).toList();
-    return livres;
+    return result;
   }
 
   Future<bool> deleteLivre( int livre_id) async{

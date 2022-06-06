@@ -37,6 +37,7 @@ dependencies:
 
 dev_dependencies:
   flutter_bloc:
+  fluttertoast: ^8.0.9
   flutter_test:
     sdk: flutter
 
