@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bibiotheque_management/blocs/livres/livres.bloc.dart';
 import 'package:bibiotheque_management/blocs/livres/livres.events.dart';
 import 'package:bibiotheque_management/blocs/livres/livres.state.dart';
@@ -141,7 +143,9 @@ class LivresPage extends StatelessWidget {
                                         Icon(Icons.close, color: Colors.orange),
                                         Text("Annuler la recherche",
                                             style:
-                                                TextStyle(color: Colors.orange))
+                                                TextStyle(color: Colors.orange),
+
+                                        )
                                       ])),
                                 )
                               : Row()
