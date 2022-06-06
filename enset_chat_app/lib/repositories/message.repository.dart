@@ -25,4 +25,18 @@ class MessageRepository {
       throw Exception("Erreur de chargement des messages");
     }
   }
+
+  Future<Message> addMessage(Message message)async{
+    var future= await Future.delayed(const Duration(seconds: 1));
+    int rand= Random().nextInt(10);
+    if(rand>3){
+      message.id=messages.length+1;
+      messages.add(message);
+      return message;
+    }else{
+      throw Exception("Erreur de chargement des contacts");
+    }
+
+  }
+
 }

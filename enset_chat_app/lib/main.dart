@@ -7,6 +7,7 @@ import 'package:enset_chat_app/models/contact.model.dart';
 import 'package:enset_chat_app/repositories/contact.repository.dart';
 import 'package:enset_chat_app/repositories/message.repository.dart';
 import 'package:enset_chat_app/ui/pages/contacts.page.dart';
+import 'package:enset_chat_app/ui/pages/home.dart';
 import 'package:enset_chat_app/ui/pages/message.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,11 +32,11 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.yellow,
           ),
           routes: {
-            // "/" : null,
+            "/" : (context)=>const HomePage(),
             "/contacts": (context) => ContactsPage(),
             "/messages": (context) => MessagesPage()
           },
-          initialRoute: "/contacts",
+          initialRoute: "/",
         )
     );
   }

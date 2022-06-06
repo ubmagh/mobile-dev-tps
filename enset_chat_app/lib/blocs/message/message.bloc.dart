@@ -32,5 +32,16 @@ class MessageBloc extends Bloc<MessageEvent, MessageState> {
               currentEvent: event));
         }
     });
+
+    on<NewMessageEvent>((event, emit) async {
+      emit(MessageState(messages: [],requestState: RequestState.Loading,currentEvent: event));
+      try{
+        messageRepository.addMessage(event.message);
+        List<Message> messages=await messageRepository.messagesByContact(event.message.idContact);
+        emit(MessageState(messages: messages,requestState: RequestState.Loaded,currentEvent: event));
+      }catch(e){
+        emit(MessageState(messages: [],requestState: RequestState.Error,errorMessage: e.toString(),currentEvent: event));
+      }
+    });
   }
 }
