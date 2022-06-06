@@ -127,21 +127,24 @@ class LivresPage extends StatelessWidget {
                                   color: Colors.orange,
                                   fontWeight: FontWeight.w300),
                               textAlign: TextAlign.center),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 20.0),
-                            child: OutlinedButton(
-                                onPressed: () {
-                                  context
-                                      .read<LivresBloc>()
-                                      .add(GetLivresEvent());
-                                  textController.text = "";
-                                },
-                                child: Wrap(children: const [
-                                  Icon(Icons.close, color: Colors.orange),
-                                  Text("Annuler la recherche",
-                                      style: TextStyle(color: Colors.orange))
-                                ])),
-                          )
+                          textController.text.isNotEmpty
+                              ? Padding(
+                                  padding: const EdgeInsets.only(top: 20.0),
+                                  child: OutlinedButton(
+                                      onPressed: () {
+                                        context
+                                            .read<LivresBloc>()
+                                            .add(GetLivresEvent());
+                                        textController.text = "";
+                                      },
+                                      child: Wrap(children: const [
+                                        Icon(Icons.close, color: Colors.orange),
+                                        Text("Annuler la recherche",
+                                            style:
+                                                TextStyle(color: Colors.orange))
+                                      ])),
+                                )
+                              : Row()
                         ],
                       ));
                 }
