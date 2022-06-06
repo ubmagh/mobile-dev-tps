@@ -9,7 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class LivresPage extends StatelessWidget {
-  LivresEvents? livresEvent;
+  LivresEvents livresEvent=GetLivresEvent();
 
   LivresPage({Key? key}) : super(key: key);
   TextEditingController textController = TextEditingController();
@@ -49,6 +49,7 @@ class LivresPage extends StatelessWidget {
                           textColor: Colors.white,
                           fontSize: 16.0);
                     } else {
+                      livresEvent = SearchLivresEvent(keyword: textController.text);
                       context
                           .read<LivresBloc>()
                           .add(SearchLivresEvent(keyword: textController.text));
@@ -103,7 +104,7 @@ class LivresPage extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {
-                          context.read<LivresBloc>().add(livresEvent!);
+                          context.read<LivresBloc>().add(livresEvent);
                         },
                         icon: const Icon(Icons.refresh),
                         color: Colors.deepOrange,
@@ -137,6 +138,7 @@ class LivresPage extends StatelessWidget {
                                         context
                                             .read<LivresBloc>()
                                             .add(GetLivresEvent());
+                                        livresEvent = GetLivresEvent();
                                         textController.text = "";
                                       },
                                       child: Wrap(children: const [
@@ -173,6 +175,10 @@ class LivresPage extends StatelessWidget {
                                 icon:
                                     const Icon(Icons.close, color: Colors.red),
                                 onPressed: () {
+
+                                  livresEvent =  DeleteLivreEvent(
+                                      livre_id:
+                                      state.livres[index].id_livre);
                                   context.read<LivresBloc>().add(
                                       DeleteLivreEvent(
                                           livre_id:
@@ -197,6 +203,7 @@ class LivresPage extends StatelessWidget {
                     IconButton(
                         onPressed: () {
                           context.read<LivresBloc>().add(GetLivresEvent());
+                          livresEvent = GetLivresEvent();
                         },
                         icon: const Icon(Icons.arrow_circle_down,
                             size: 40, color: Colors.green))

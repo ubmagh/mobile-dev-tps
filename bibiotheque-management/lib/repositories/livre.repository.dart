@@ -1,7 +1,7 @@
-
-
-
+import 'dart:math';
 import 'package:bibiotheque_management/models/livre.model.dart';
+
+
 
 class LivreRepository {
 
@@ -18,11 +18,19 @@ class LivreRepository {
 
   Future<List<Livre>> allLivres() async {
     var future = await Future.delayed(const Duration(seconds: 2));
+    int rand = Random().nextInt(10);
+    if( rand>9) {
+      throw Exception(" C'est un erreur de type Y 👍!");
+    }
     return livres;
   }
 
   Future<List<Livre>> findLivres( String keyword) async {
     var future = await Future.delayed(const Duration(seconds: 2));
+    int rand = Random().nextInt(10);
+    if( rand>9) {
+      throw Exception(" C'est un erreur de type Y 👍!");
+    }
     List<Livre> result = livres.where((element){
        return element.titre.toLowerCase().contains(keyword) || element.auteur.toLowerCase().contains(keyword) || element.isbn.toLowerCase().contains(keyword) || element.anne_publication.toString().contains(keyword) ;
     }).toList();
@@ -31,6 +39,10 @@ class LivreRepository {
 
   Future<bool> deleteLivre( int livre_id) async{
     var future = await Future.delayed(const Duration(seconds: 2));
+    int rand = Random().nextInt(10);
+    if( rand>9) {
+      throw Exception(" C'est un erreur dans la suppression de type Y 👍!");
+    }
     livres.removeWhere((element) => element.id_livre==livre_id);
     return true;
   }

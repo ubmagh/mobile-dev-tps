@@ -57,7 +57,7 @@ class LivresBloc extends Bloc<LivresEvents, LivresState> {
       }catch(e){
         emit( LivresState(livres: [],requestState: RequestState.Error,errorMessage: e.toString(),currentEvent: event));
         Fluttertoast.showToast(
-            msg: "Erreur, le livre n'est pas supprimé !",
+            msg: "Erreur, le livre n'est pas supprimé ! \n erreur ; "+e.toString(),
             toastLength: Toast.LENGTH_LONG,
             gravity: ToastGravity.SNACKBAR,
             timeInSecForIosWeb: 2,

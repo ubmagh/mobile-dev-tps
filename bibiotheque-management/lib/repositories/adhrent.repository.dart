@@ -1,7 +1,7 @@
-
-
-
+import 'dart:math';
 import 'package:bibiotheque_management/models/adherent.model.dart';
+
+
 
 class AdherentRepository {
 
@@ -19,12 +19,20 @@ class AdherentRepository {
 
   Future<List<Adherent>> allAdherents() async {
     var future = await Future.delayed(const Duration(seconds: 2));
+    int rand = Random().nextInt(10);
+    if( rand>9) {
+      throw Exception(" C'est un erreur de type X 👍!");
+    }
     return adherents;
   }
 
 
   Future<bool> deleteAdherent( int adherent_id) async{
     var future = await Future.delayed(const Duration(seconds: 2));
+    int rand = Random().nextInt(10);
+    if( rand>9) {
+      throw Exception(" C'est un erreur dans la suppression de type X 👍!");
+    }
     adherents.removeWhere((element) => element.id_adherent==adherent_id);
     return true;
   }

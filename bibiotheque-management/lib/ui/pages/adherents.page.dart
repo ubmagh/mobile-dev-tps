@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class AdherentsPage extends StatelessWidget {
-  AdherentsEvent? adherentsEvent;
+  AdherentsEvent adherentsEvent = GetAdherentsEvent();
 
   AdherentsPage({Key? key}) : super(key: key);
 
@@ -60,7 +60,7 @@ class AdherentsPage extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {
-                          context.read<AdherentsBloc>().add(adherentsEvent!);
+                          context.read<AdherentsBloc>().add(adherentsEvent);
                         },
                         icon: const Icon(Icons.refresh),
                         color: Colors.deepOrange,
@@ -100,8 +100,11 @@ class AdherentsPage extends StatelessWidget {
                           child: ListTile(
                             leading: CircleAvatar(
                               child: Text(
-                                  state.adherents[index].nom.toUpperCase().substring(0, 1) +
-                                      state.adherents[index].prenom.toUpperCase()
+                                  state.adherents[index].nom
+                                          .toUpperCase()
+                                          .substring(0, 1) +
+                                      state.adherents[index].prenom
+                                          .toUpperCase()
                                           .substring(0, 1),
                                   style: const TextStyle(
                                       color: Colors.white,
@@ -119,6 +122,9 @@ class AdherentsPage extends StatelessWidget {
                                 icon:
                                     const Icon(Icons.close, color: Colors.red),
                                 onPressed: () {
+                                  adherentsEvent = DeleteAdherentEvent(
+                                      adherent_id:
+                                          state.adherents[index].id_adherent);
                                   context.read<AdherentsBloc>().add(
                                       DeleteAdherentEvent(
                                           adherent_id: state
@@ -142,6 +148,7 @@ class AdherentsPage extends StatelessWidget {
                             textAlign: TextAlign.center)),
                     IconButton(
                         onPressed: () {
+                          adherentsEvent = GetAdherentsEvent();
                           context
                               .read<AdherentsBloc>()
                               .add(GetAdherentsEvent());

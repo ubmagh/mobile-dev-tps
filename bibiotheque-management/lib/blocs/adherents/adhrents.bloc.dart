@@ -65,7 +65,7 @@ class AdherentsBloc extends Bloc<AdherentsEvent, AdherentsState> {
             errorMessage: e.toString(),
             currentEvent: event));
         Fluttertoast.showToast(
-            msg: "Erreur, l'adherent n'est pas supprimé !",
+            msg: "Erreur, l'adherent n'est pas supprimé ! \n erreur : "+e.toString(),
             toastLength: Toast.LENGTH_LONG,
             gravity: ToastGravity.SNACKBAR,
             timeInSecForIosWeb: 2,
